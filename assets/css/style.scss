@@ -1,0 +1,288 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+// Modern color scheme and variables
+:root {
+  --primary-color: #2c5aa0;
+  --secondary-color: #f39c12;
+  --accent-color: #e74c3c;
+  --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --text-primary: #2c3e50;
+  --text-secondary: #7f8c8d;
+  --border-radius: 12px;
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+// Enhanced body styling
+body {
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  line-height: 1.6;
+  color: var(--text-primary);
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+}
+
+// Header styling with gradient
+.site-header {
+  background: var(--bg-gradient);
+  border-bottom: none;
+  box-shadow: var(--shadow);
+}
+
+.site-title, .site-title:visited {
+  color: white !important;
+  font-weight: 700;
+  font-size: 1.8rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+// Main content wrapper
+.wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+// Enhanced headings
+h1 {
+  background: var(--bg-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 3rem;
+  font-weight: 800;
+  text-align: center;
+  margin: 2rem 0;
+  line-height: 1.2;
+}
+
+h2 {
+  color: var(--primary-color);
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 2.5rem 0 1.5rem 0;
+  position: relative;
+  padding-left: 1rem;
+}
+
+h2:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 2rem;
+  background: var(--bg-gradient);
+  border-radius: 2px;
+}
+
+// Enhanced paragraph styling
+p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+// Modern table styling
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: white;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  margin: 2rem 0;
+  font-size: 0.95rem;
+}
+
+th {
+  background: var(--bg-gradient);
+  color: white;
+  font-weight: 600;
+  text-align: left;
+  padding: 1rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+td {
+  padding: 1rem;
+  border-bottom: 1px solid #ecf0f1;
+  vertical-align: top;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tr:hover {
+  background-color: #f8f9fa;
+  transform: translateY(-1px);
+  transition: all 0.3s ease;
+}
+
+// Enhanced links
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+  text-decoration-color: var(--accent-color);
+}
+
+// Leadership section styling
+h2:contains("团队") + p + ul {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+}
+
+h2:contains("团队") + p + ul li {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  margin: 1rem 0;
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  border-left: 4px solid var(--primary-color);
+  transition: all 0.3s ease;
+  font-size: 1.05rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+h2:contains("团队") + p + ul li:before {
+  content: "👨‍💻";
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  opacity: 0.6;
+}
+
+h2:contains("团队") + p + ul li:hover {
+  transform: translateX(8px) translateY(-2px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+  border-left-color: var(--accent-color);
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+h2:contains("团队") + p + ul li:hover:before {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.1);
+}
+
+// Add some cool hover effects to the main heading
+h1:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
+
+// Enhanced table hover effects
+tr:hover td {
+  background-color: #f1f3f4;
+  transform: scale(1.01);
+}
+
+// Add subtle animations
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(44, 90, 160, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(44, 90, 160, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(44, 90, 160, 0); }
+}
+
+h2:before {
+  animation: pulse 2s infinite;
+}
+
+// Footer styling
+.footer-note {
+  text-align: center;
+  padding: 2rem 0 1rem 0;
+  border-top: 2px solid #ecf0f1;
+  margin-top: 3rem;
+}
+
+.footer-note em {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.footer-note a {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .wrapper {
+    margin: 1rem;
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+  
+  h1 {
+    font-size: 2.2rem;
+  }
+  
+  h2 {
+    font-size: 1.6rem;
+  }
+  
+  table {
+    font-size: 0.85rem;
+  }
+  
+  th, td {
+    padding: 0.75rem;
+  }
+}
+
+// Add some micro-interactions
+.wrapper {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Enhanced emoji styling
+h1, h2 {
+  .emoji {
+    margin-right: 0.5rem;
+  }
+}
+
+// Style for the description section
+h2:contains("关于") + p {
+  background: linear-gradient(45deg, #f8f9fa, #ffffff);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  border-left: 4px solid var(--secondary-color);
+  margin: 1.5rem 0;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}

@@ -1,7 +1,6 @@
 ---
 layout: default
 title: "OncoHarmony 协作组技术沙龙"
-description: "生物医学与计算生物学技术分享平台 | Biomedical & Computational Biology Tech Platform"
 ---
 
 # 🧬 Tech Workshop | 技术沙龙
@@ -18,8 +17,6 @@ The OncoHarmony Network Tech Workshop serves as a platform for sharing innovativ
 |-----|---------|------|------|----------|---|
 | 1 | 临床生信零基础到进阶以及ggalign包的研发 | [彭云](https://github.com/Yunuuuu) | 待添加 | TODO | TODO |
 | 待添加 | 待添加 | 待添加 | 待添加 | | |
-
----
 
 ## 🤝 团队 | Leadership
 

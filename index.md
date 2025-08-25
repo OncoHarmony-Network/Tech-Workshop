@@ -18,9 +18,7 @@ The OncoHarmony Network Tech Workshop serves as a platform for sharing innovativ
 | 1 | 临床生信零基础到进阶以及ggalign包的研发 | [彭云](https://github.com/Yunuuuu) | 待添加 | TODO | TODO |
 | 待添加 | 待添加 | 待添加 | 待添加 | | |
 
-## 🤝 团队 | Leadership
-
-**负责人 | Co-Leaders:**
+## 🤝 负责人 | Leadership
 
 - [周建国](https://github.com/JianGuoZhou3) 博士，遵义医科大学
 - [王诗翔](https://github.com/ShixiangWang) 博士，中南大学

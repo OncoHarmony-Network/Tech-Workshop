@@ -1,0 +1,18 @@
+title: "OncoHarmony 协作组技术沙龙"
+description: "记录和分享生物医学及计算生物学中的各类技术"
+theme: minima
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# GitHub Pages settings
+github:
+  repository_url: https://github.com/OncoHarmony-Network/Tech-Workshop
+
+# Default layout for all pages
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"

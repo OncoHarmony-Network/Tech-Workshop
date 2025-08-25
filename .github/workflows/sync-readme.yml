@@ -1,0 +1,41 @@
+name: Sync README to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+    paths: [ 'README.md' ]
+  workflow_dispatch:
+
+jobs:
+  sync-readme:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Update index.md from README.md
+      run: |
+        # Create index.md with front matter and README content
+        cat > index.md << 'EOF'
+        ---
+        layout: default
+        title: "OncoHarmony 协作组技术沙龙"
+        ---
+        
+        EOF
+        cat README.md >> index.md
+        
+    - name: Commit and push if changed
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add index.md
+        if git diff --staged --quiet; then
+          echo "No changes to commit"
+        else
+          git commit -m "Auto-sync: Update index.md from README.md"
+          git push
+        fi
